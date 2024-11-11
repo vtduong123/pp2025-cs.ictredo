@@ -1,4 +1,4 @@
-USTH ICT 2024 Advanced Programming with Python
+USTH ICT 2025 Advanced Programming with Python
 =====================================================
 
 Students are expected to:
