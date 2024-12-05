@@ -9,6 +9,6 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: USTH ICT1 
-* Student ID: Not-Vietnamese
+* Student Name: Vo Tri Duong
+* Student ID: BI12-115
 
