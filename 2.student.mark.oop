@@ -1,0 +1,7 @@
+class Student:
+    def __init__(self, student_id, name, dob):
+        # Create a student with basic details and an empty marks dictionary
+        self.__id = student_id
+        self.__name = name
+        self.__dob = dob
+        self.__marks = {}
