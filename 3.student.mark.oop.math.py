@@ -22,8 +22,9 @@ class Student:
 
     def get_marks(self):
         return self.__marks
-    
-    class Course:
+
+
+class Course:
     def __init__(self, course_id, name):
         self.id = course_id
         self.name = name
@@ -70,3 +71,42 @@ def main():
         except ValueError:
             print("Invalid input. Please enter a number.")
             continue
+
+        if option == 0:
+            print("Exiting the program. Goodbye!")
+            break
+        elif option == 1:
+            student_id = input("Enter Student ID: ").strip()
+            student_name = input("Enter Student Name: ").strip()
+            dob = input("Enter Student Date of Birth (DoB): ").strip()
+            student = Student(student_id, student_name, dob)
+            school_listing.students.append(student)
+            print("Student added successfully!")
+        elif option == 2:
+            course_id = input("Enter Course ID: ").strip()
+            course_name = input("Enter Course Name: ").strip()
+            course = Course(course_id, course_name)
+            school_listing.courses.append(course)
+            print("Course added successfully!")
+        elif option == 3:
+            try:
+                student_index = int(input("Enter student index to enter mark: ")) - 1
+                if student_index < 0 or student_index >= len(school_listing.students):
+                    print("Invalid student index!")
+                    continue
+                course_id = input("Enter Course ID to enter mark for the student: ").strip()
+                mark = float(input("Enter Mark for the student: "))
+                school_listing.students[student_index].input_mark(course_id, mark)
+                print("Mark added successfully!")
+            except (ValueError, IndexError):
+                print("Invalid input. Please try again.")
+        elif option == 4:
+            school_listing.list_students()
+        elif option == 5:
+            school_listing.list_courses()
+        else:
+            print("Invalid option. Please try again!")
+
+
+if __name__ == "__main__":
+    main()
