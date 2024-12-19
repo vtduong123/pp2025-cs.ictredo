@@ -1,5 +1,5 @@
-from domains.student import Student
-from domains.course import Course
+from domains import Student
+from domains import Course
 from domains.listing import Listing
 import input as inp
 import output as out
